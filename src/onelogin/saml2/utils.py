@@ -299,9 +299,9 @@ class OneLogin_Saml2_Utils(object):
         :return: False if https is not active
         :rtype: boolean
         """
-        is_https = 'https' in request_data and request_data['https'] != 'off'
+        is_https = 'https' #in request_data and request_data['https'] != 'off'
         # TODO: this use of server_port should be removed too
-        is_https = is_https or ('server_port' in request_data and str(request_data['server_port']) == '443')
+        #is_https = is_https or ('server_port' in request_data and str(request_data['server_port']) == '443')
         return is_https
 
     @staticmethod

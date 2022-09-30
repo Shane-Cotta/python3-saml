@@ -328,8 +328,8 @@ class OneLogin_Saml2_Settings(object):
         self._sp.setdefault('x509cert', '')
         self._sp.setdefault('privateKey', '')
 
-        self._security.setdefault('requestedAuthnContext', True)
-        self._security.setdefault('requestedAuthnContextComparison', 'exact')
+        self._security.setdefault('requestedAuthnContext', False)
+        self._security.setdefault('requestedAuthnContextComparison', 'minimum')
         self._security.setdefault('failOnAuthnContextMismatch', False)
 
     def check_settings(self, settings):
